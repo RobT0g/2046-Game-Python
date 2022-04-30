@@ -18,5 +18,7 @@ while running:                      # looping
     for e in pygame.event.get():
         if d := getMoves():
             pass
+        if e.type == pygame.MOUSEBUTTONDOWN:
+            screen.update(pygame.mouse.get_pos())
         if pygame.key.get_pressed()[pygame.K_ESCAPE] or e.type == QUIT:
             running = False
